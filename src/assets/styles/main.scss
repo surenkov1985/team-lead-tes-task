@@ -1,5 +1,181 @@
 * {
     font-family: sans-serif;
+
+    margin: 0;
+    padding: 0;
+    color: #e9e3e3;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+.app {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.background {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: url("../images/1643012604_4-phonoteka-org-p-zadnii-fon-temnii-4.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.promo-section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    text-align: center;
     font-size: 40px;
     font-weight: 900;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bg-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.3);
+}
+
+.promo-description {
+    // margin-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 50px;
+}
+
+.promo-characteristic {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+}
+
+.promo-desc-title {
+    font-size: 25px;
+}
+
+.promo-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    font-size: 18px;
+}
+
+.section-control {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    min-width: 350px;
+    padding: 20px 30px;
+    border-radius: 8px;
+    border: none;
+    // background: #e7ac35;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    background: #f78d1d;
+    background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+    background: -moz-linear-gradient(top, #faa51a, #f47a20);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        background: #f47c20;
+        background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
+        background: -moz-linear-gradient(top, #f88e11, #f06015);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
+    }
+}
+
+.ingredients-item {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+}
+
+.ingredients-text {
+    width: 70%;
+    font-size: 18px;
+
+    &.left {
+        text-align: right;
+    }
+}
+
+.ingredients {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ingredient-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.reviews-container {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.order-label {
+    position: relative;
+    width: 100%;
+}
+
+.order-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
 }

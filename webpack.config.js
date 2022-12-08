@@ -30,7 +30,7 @@ const build = {
 		maxEntrypointSize: 512000,
 		maxAssetSize: 512000,
 	},
-	entry: ["@babel/polyfill","./index.js"],
+	entry: ["@babel/polyfill", "./index.js"],
 	resolve: {
 		alias: {
 			"": path.resolve(__dirname, "src/"),
@@ -58,6 +58,13 @@ const build = {
 			{
 				test: /\.html$/i,
 				use: ["html-loader"],
+			},
+			{
+				test: /\.(jpg|png|svg|jpeg|gif)$/i,
+				type: "asset/resource",
+				generator: {
+					filename: "assets/img/[name][ext]",
+				},
 			},
 			{
 				test: /\.(sa|sc|c)ss$/,
